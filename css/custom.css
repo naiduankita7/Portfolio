@@ -9,7 +9,8 @@ html {
   width: 100%;
 }
 
-a { /* Targets all links */
+a {
+  /* Targets all links */
   color: #000; /* Or any color, e.g., black */
   text-decoration: none; /* Removes the underline */
 }
@@ -121,11 +122,11 @@ a { /* Targets all links */
   margin-top: 20px;
 }
 
-.about-card { 
-  max-width: 60%;     /* Strict limit on width (Decrease this to make it smaller) */
-    width: 90%;             /* Ensures it fits on mobile screens */
-    margin: 50px auto; 
-    padding:40px;     /* Centers the box (auto) and gives 50px vertical spacing */
+.about-card {
+  max-width: 60%; /* Strict limit on width (Decrease this to make it smaller) */
+  width: 90%; /* Ensures it fits on mobile screens */
+  margin: 50px auto;
+  padding: 40px; /* Centers the box (auto) and gives 50px vertical spacing */
   border: 1px solid rgba(0, 0, 0, 0.05);
   background-color: #ffffff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -140,7 +141,7 @@ a { /* Targets all links */
 /* --- SKILLS SECTION STYLES --- */
 
 /* The Card Container */
-#skills{
+#skills {
   margin-top: 100px;
 }
 .skill-card {
@@ -179,13 +180,20 @@ a { /* Targets all links */
   color: #333;
 }
 
-/* Container for the badges */
-.skill-tags {
+/* Container for the badges
+/* .skill-tags {
   display: flex;
   flex-wrap: wrap; /* Allows tags to wrap to next line */
+/* justify-content: center; */
+/* gap: 10px;  */
+/* } */
+
+/* 
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap; 
   justify-content: center;
-  /* gap: 10px;  */
-}
+ }   */
 
 /* The Individual Skill Pills */
 .skill-tags span {
@@ -205,38 +213,111 @@ a { /* Targets all links */
 }
 
 .project-content {
- background-color: #ffffff; /* Clean white background */
-  padding: 50px 80px;
-  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff; /* Clean white background */
+  padding: 30px 80px;
+  border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Soft shadow */
-  margin: 10px 50px;
-  height: 350px; /* Ensures cards in the same row are equal height */
-
+  margin: 5px auto;
+  /* height: 100%; */
+  min-height: 350px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  font-size: 1.2em;
 }
 
 .corouser-indicators {
-    /* bottom: -50px; */
   background-color: #06b6d4;
 }
 
+.carousel-item {
+  padding: 20px;
+}
 .carousel-indicators button {
-    background-color: #06b6d4 !important; /* Cyan color */
-    width: 12px !important;
-    height: 12px !important;
-    border-radius: 50%;
-    margin: 0 5px !important;
-    opacity: 0.5;
+  background-color: #272929 !important;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50%;
+  margin: 0 5px !important;
+  opacity: 0.5;
 }
 
 .project-content h3 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
 }
 
-#projects{
+#projects {
   margin-top: 100px;
+}
+
+.project-content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(6, 182, 212, 0.15); /* Slight cyan glow on hover */
+  border-color: #06b6d4; /* Border turns cyan */
+}
+
+.education-content {
+  position: relative;
+  /* max-width: 800px;
+  margin: 0 auto; */
+  margin-left: 10px;
+  padding-left: 30px; /* Space for the line */
+  border-left: 3px dashed #06b6d4; /* The Vertical Line */
+}
+.education-card {
+  position: relative;
+  background-color: #ffffff; /* Clean white background */
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Soft shadow */
+  height: 100%; /* Ensures cards in the same row are equal height */
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.education-card:hover {
+  transform: translateX(10px); /* Moves slightly right on hover */
+  border-color: #06b6d4;
+}
+
+.dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #06b6d4;
+  border-radius: 50%;
+  left: -10px; /* Centers dot on the line (30px padding + 3px border/2 + dot radius) */
+  top: 20px;
+  border: 3px solid #fff; /* White ring effect */
+  background-color: #06b6d4;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+@keyframes highlightDot {
+    to {
+        background-color: #06b6d4; /* Turns Cyan */
+        transform: scale(1.3);     /* Grows slightly */
+        box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.2); /* Adds Glow */
+    }
+}
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.4);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(6, 182, 212, 0);
+        transform: scale(1.1);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(6, 182, 212, 0);
+        transform: scale(1);
+    }
 }
