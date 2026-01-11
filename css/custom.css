@@ -180,21 +180,6 @@ a {
   color: #333;
 }
 
-/* Container for the badges
-/* .skill-tags {
-  display: flex;
-  flex-wrap: wrap; /* Allows tags to wrap to next line */
-/* justify-content: center; */
-/* gap: 10px;  */
-/* } */
-
-/* 
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: center;
- }   */
-
 /* The Individual Skill Pills */
 .skill-tags span {
   background-color: #f3f4f6; /* Light gray background */
@@ -321,4 +306,33 @@ a {
 
 #education{
   margin-top: 100px;
+}
+
+.internship-header {
+  background-color: #06b6d4;
+  max-width: 50%; /* Strict limit on width (Decrease this to make it smaller) */
+  width: 90%; /* Ensures it fits on mobile screens */
+  margin-left:auto;
+  margin-right: auto;
+  /* margin: 50px auto; */
+  padding: 20px; /* Centers the box (auto) and gives 50px vertical spacing */
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.internship-header:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(6, 182, 212, 0.15); /* Slight cyan glow on hover */
+  border-color: #06b6d4; /* Border turns cyan */
+}
+
+.internship-description {
+  max-width: 45%; /* Strict limit on width (Decrease this to make it smaller) */
+  width: 90%; /* Ensures it fits on mobile screens */
+  margin-left:auto;
+  margin-right: auto;
+  padding: 30px; /* Centers the box (auto) and gives 50px vertical spacing */
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
