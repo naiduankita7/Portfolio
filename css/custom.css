@@ -264,60 +264,61 @@ a {
 
 .education-content {
   position: relative;
-  /* max-width: 800px;
-  margin: 0 auto; */
-  margin-left: 10px;
-  padding-left: 30px; /* Space for the line */
-  border-left: 3px dashed #06b6d4; /* The Vertical Line */
-}
-.education-card {
-  position: relative;
-  background-color: #ffffff; /* Clean white background */
-  border-radius: 20px;
-  text-align: left;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Soft shadow */
-  height: 100%; /* Ensures cards in the same row are equal height */
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  margin-bottom: 20px;
+   padding: 20px 0;
 }
 
-.education-card:hover {
-  transform: translateX(10px); /* Moves slightly right on hover */
-  border-color: #06b6d4;
-}
+.education-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    margin-left: -1px; /* Perfectly centers the 2px line */
+    border-left: 2px dashed #06b6d4; /* Cyan dashed line */
+    z-index: 0;
+    opacity: 0.5;
+} 
 
 .dot {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background-color: #06b6d4;
-  border-radius: 50%;
-  left: -10px; /* Centers dot on the line (30px padding + 3px border/2 + dot radius) */
-  top: 20px;
-  border: 3px solid #fff; /* White ring effect */
-  background-color: #06b6d4;
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
-  animation: pulseGlow 2s infinite ease-in-out;
+    width: 18px;
+    height: 18px;
+    background-color: #06b6d4;
+    border: 4px solid #fff; /* White border to separate from line */
+    border-radius: 50%;
+    z-index: 1; /* Sits on top of the line */
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
 }
 
-@keyframes highlightDot {
-    to {
-        background-color: #06b6d4; /* Turns Cyan */
-        transform: scale(1.3);     /* Grows slightly */
-        box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.2); /* Adds Glow */
-    }
+/* .dot.active{
+  background-color: #06b6d4;
+    transform: scale(1.5);
+    box-shadow: 0 0 0 6px rgba(6, 182, 212, 0.3); 
+} */
+
+.education-card {
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 5x 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
-@keyframes pulseGlow {
-    0% {
-        box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.4);
-        transform: scale(1);
-    }
-    50% {
-        box-shadow: 0 0 0 10px rgba(6, 182, 212, 0);
-        transform: scale(1.1);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(6, 182, 212, 0);
-        transform: scale(1);
-    }
+
+
+.education-row:hover .dot {
+    background-color: #06b6d4; /* Fill with Cyan */
+    transform: scale(1.4); /* Make it bigger */
+    box-shadow: 0 0 0 6px rgba(6, 182, 212, 0.2); /* Add glow */
+}
+
+.education-row:hover .education-card {
+    transform: translateY(-5px);
+    border-color: #06b6d4;
+    box-shadow: 0 10px 25px rgba(6, 182, 212, 0.15);
+}
+
+#education{
+  margin-top: 100px;
 }
