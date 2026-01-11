@@ -30,7 +30,7 @@ a {
 /* The Background Image */
 .hero-bg {
   position: absolute;
-  margin-top: 100px;
+  margin-top: 10px;
   width: auto;
   height: 83vh;
   /* object-fit: cover;      KEY: Crops image nicely to fill screen */
@@ -112,12 +112,6 @@ a {
   margin-top: 20px;
   text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
 }
-
-#about{
-  background-color: #3c6e71;
-  height: 100vh;
-  padding: 40px;
-}
 #about-info {
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
@@ -133,9 +127,10 @@ a {
 .about-card {
   max-width: 60%; /* Strict limit on width (Decrease this to make it smaller) */
   width: 90%; /* Ensures it fits on mobile screens */
-  /* margin-top: 10%; */
+  margin: 50px auto;
   padding: 40px; /* Centers the box (auto) and gives 50px vertical spacing */
   border: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
 }
@@ -149,7 +144,8 @@ a {
 
 /* The Card Container */
 #skills {
-  margin-top: 100px;
+  /* margin-top: 100px; */
+  background-color: #06b6d4;
 }
 .skill-card {
   background-color: #ffffff; /* Clean white background */
@@ -246,9 +242,6 @@ a {
 
 #projects {
   margin-top: 100px;
-  background-color: #d9d9d9;
-  height: 100vh;
-  padding: 40px;
 }
 
 .project-content:hover {
@@ -316,8 +309,7 @@ a {
 }
 
 #education{
-  background-color: #284b63;
-  padding:40px;
+  background-color: grey;
 }
 
 .internship-header {
@@ -352,7 +344,9 @@ a {
 }
 
 /* --- CERTIFICATIONS SECTION STYLES --- */
-
+#Certifications{
+  background-color: #06b6d4;
+}
 /* Certification Card Container */
 .cert-card {
   display: block;
