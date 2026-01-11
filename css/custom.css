@@ -30,9 +30,9 @@ a {
 /* The Background Image */
 .hero-bg {
   position: absolute;
-  margin-top: 120px;
+  margin-top: 100px;
   width: auto;
-  height: 80vh;
+  height: 83vh;
   /* object-fit: cover;      KEY: Crops image nicely to fill screen */
   opacity: 0.6; /* Lowers brightness so text is readable */
   z-index: 0;
@@ -49,13 +49,15 @@ a {
 
 /* Name Styling */
 .name {
-  font-family: "Montserrat", sans-serif; /* Modern, thick font */
+  /* font-family: "Oswald"; */
+  font-family: "Roboto Mono";
+  font-weight: 400;
   font-size: 8rem; /* Large responsive size */
-  font-weight: 700;
   color: #fff; /* White text usually looks best on photos */
   text-transform: uppercase;
-  letter-spacing: 5px; /* Adds elegant spacing */
-  margin-bottom: 10px;
+  margin-top: 200px;
+  letter-spacing: 10px; /* Adds elegant spacing */
+  margin-bottom: 5px;
   text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5); /* Shadow for readability */
 }
 
@@ -110,6 +112,12 @@ a {
   margin-top: 20px;
   text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
 }
+
+#about{
+  background-color: #3c6e71;
+  height: 100vh;
+  padding: 40px;
+}
 #about-info {
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
@@ -125,10 +133,9 @@ a {
 .about-card {
   max-width: 60%; /* Strict limit on width (Decrease this to make it smaller) */
   width: 90%; /* Ensures it fits on mobile screens */
-  margin: 50px auto;
+  /* margin-top: 10%; */
   padding: 40px; /* Centers the box (auto) and gives 50px vertical spacing */
   border: 1px solid rgba(0, 0, 0, 0.05);
-  background-color: #ffffff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
 }
@@ -239,6 +246,9 @@ a {
 
 #projects {
   margin-top: 100px;
+  background-color: #d9d9d9;
+  height: 100vh;
+  padding: 40px;
 }
 
 .project-content:hover {
@@ -248,6 +258,7 @@ a {
 }
 
 .education-content {
+  font-family: "Poppins", sans-serif;
   position: relative;
    padding: 20px 0;
 }
@@ -305,7 +316,8 @@ a {
 }
 
 #education{
-  margin-top: 100px;
+  background-color: #284b63;
+  padding:40px;
 }
 
 .internship-header {
@@ -327,6 +339,8 @@ a {
 }
 
 .internship-description {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
   max-width: 45%; /* Strict limit on width (Decrease this to make it smaller) */
   width: 90%; /* Ensures it fits on mobile screens */
   margin-left:auto;
@@ -410,4 +424,58 @@ a {
 
 .cert-card:hover .view-cert-overlay {
   transform: translateY(0);
+}
+
+/* --- CONTACT SECTION STYLES --- */
+#contact {
+  margin-top: 100px;
+  padding-bottom: 50px;
+}
+
+.contact-card {
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  max-width: 800px; /* Limits width to look like a card */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.contact-card:hover {
+    box-shadow: 0 15px 40px rgba(6, 182, 212, 0.15); /* Slight cyan glow */
+    border-color: #06b6d4;
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-icon:hover {
+  color: #06b6d4; /* Cyan hover color */
+  transform: translateY(-5px);
+}
+
+.contact-btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  background-color: transparent;
+  color: #06b6d4;
+  border: 2px solid #06b6d4;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.contact-btn:hover {
+  background-color: #06b6d4;
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(6, 182, 212, 0.3);
+  text-decoration: none;
 }
