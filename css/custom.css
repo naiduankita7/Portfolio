@@ -1,5 +1,3 @@
-
-
 * {
   margin: 0;
   padding: 0;
@@ -215,7 +213,7 @@ a:hover {
 .skill-card {
   background: white;
   background-color: #ffffff;
-  padding: 40px 30px;
+  padding: 20px 8px;
   height: 100%;
 }
 
@@ -258,7 +256,10 @@ a:hover {
 }
 
 /* --- Projects Section --- */
-#projects { background-color:#f8fafc; }
+#projects {
+   background-color:#f8fafc;
+   }
+  
 .project-content {
   font-family: "Poppins", sans-serif;
   background: #ffffff;
