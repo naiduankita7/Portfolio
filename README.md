@@ -22,4 +22,4 @@ A modern, responsive portfolio built to showcase software engineering skills and
 * **Themed Design:** Professional emerald green and slate color palette.
 * **Quick Navigation:** Smooth-scrolling sticky navbar for easy access.
 
-##🔗 Live Demo: https://naiduankita7.github.io/Portfolio/
+🔗 Live Demo: https://naiduankita7.github.io/Portfolio/
